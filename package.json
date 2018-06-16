@@ -1,0 +1,23 @@
+{
+  "name": "webgl-learning",
+  "version": "1.0.0",
+  "description": "practice for webgl",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^3.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galenjiang/webgl-learning.git"
+  },
+  "author": "galen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/galenjiang/webgl-learning/issues"
+  },
+  "homepage": "https://github.com/galenjiang/webgl-learning#readme"
+}
