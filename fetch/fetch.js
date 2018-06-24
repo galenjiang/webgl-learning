@@ -1,18 +1,11 @@
+import fetchShader from '../utils/fetch-shader.js'
 const { initShaders } = window
 
+
+
 init(async(gl, canvas) => {
-    let VSHADER_SOURCE, FSHADER_SOURCE
-    await Promise.all([
-        fetch('/fetch/one-point.frag'),
-        fetch('/fetch/one-point.vert'),
-    ]).then((res) => {
-        return Promise.all(res.map(r => {
-            return r.text()
-        }))
-        .then((res) => {
-            [VSHADER_SOURCE, FSHADER_SOURCE] = res
-        })
-    })
+    
+    const [VSHADER_SOURCE, FSHADER_SOURCE] = await fetchShader('/fetch/one-point.frag', '/fetch/one-point.vert')
 
     if (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) {
         // TODO: xxx
